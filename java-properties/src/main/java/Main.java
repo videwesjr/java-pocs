@@ -24,5 +24,11 @@ public class Main {
         System.out.println("Reading from app.properties");
         System.out.println("env: " + newProperties.getProperty("env"));
         System.out.println("test-property: " + newProperties.getProperty("test-property"));
+        System.out.println("------------------------------------");
+
+        System.out.println("Reading environment variables");
+        System.out.println("JAVA_HOME: " + reader.getEnvVariable("JAVA_HOME"));
+        System.out.println("USERNAME: " + reader.getEnvVariable("USERNAME"));
+        System.out.println("NON_EXISTENT_VAR: " + reader.getEnvVariable("NON_EXISTENT_VAR", "default-value"));
     }
 }
