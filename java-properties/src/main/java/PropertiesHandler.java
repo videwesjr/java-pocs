@@ -39,4 +39,13 @@ public class PropertiesHandler {
             this.properties.store(os, comments);
         }
     }
+
+    public String getEnvVariable(String key) {
+        return System.getenv(key);
+    }
+
+    public String getEnvVariable(String key, String defaultValue) {
+        String value = System.getenv(key);
+        return value != null ? value : defaultValue;
+    }
 }
