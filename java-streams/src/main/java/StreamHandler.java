@@ -4,7 +4,6 @@ import java.util.stream.Collectors;
 
 public class StreamHandler {
 
-    // Lists - common stream operations on a List
     public List<String> toNameList(List<Person> people) {
         return people.stream()
                 .map(Person::getName)
@@ -41,18 +40,15 @@ public class StreamHandler {
         return people.stream().noneMatch(predicate);
     }
 
-    // Arrays - stream operations on an array
     public List<Person> fromArray(Person[] people) {
         return Arrays.stream(people)
                 .collect(Collectors.toList());
     }
 
     public Person[] toArray(List<Person> people) {
-        return people.stream()
-                .toArray(Person[]::new);
+        return people.toArray(Person[]::new);
     }
 
-    // Map - transform each element into a different type
     public List<String> mapToUpperCaseNames(List<Person> people) {
         return people.stream()
                 .map(Person::getName)
@@ -75,7 +71,6 @@ public class StreamHandler {
                 .collect(Collectors.groupingBy(person -> person.getEmail().split("@")[1]));
     }
 
-    // Filter - select elements matching a condition
     public List<Person> filter(List<Person> people, Predicate<Person> predicate) {
         return people.stream()
                 .filter(predicate)
@@ -89,7 +84,6 @@ public class StreamHandler {
                 .collect(Collectors.toList());
     }
 
-    // Predicates - reusable conditions to compose filters
     public Predicate<Person> isAdult() {
         return person -> person.getAge() >= 18;
     }
