@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Supplier;
 
 public class Main {
 
@@ -72,5 +73,12 @@ public class Main {
         System.out.println("\nnegate (NOT adult):");
         sh.filter(people, sh.isAdult().negate())
                 .forEach(p -> System.out.println(p.getName()));
+
+        System.out.println("\n=== Supplier ===");
+        System.out.println("generate:");
+        Supplier<Person> personSupplier = () -> new Person("Carlos", 30, "carlos@gmail.com");
+        sh.supplierGenerate(personSupplier, 3)
+                .forEach(System.out::println);
+
     }
 }

@@ -1,6 +1,8 @@
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamHandler {
 
@@ -94,5 +96,11 @@ public class StreamHandler {
 
     public Predicate<Person> nameLongerThan(int length) {
         return person -> person.getName().length() > length;
+    }
+
+    public List<Person> supplierGenerate(Supplier<Person> supplier, int limit) {
+        return Stream.generate(supplier)
+                .limit(limit)
+                .collect(Collectors.toList());
     }
 }
