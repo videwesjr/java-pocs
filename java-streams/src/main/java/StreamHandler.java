@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -102,5 +103,15 @@ public class StreamHandler {
         return Stream.generate(supplier)
                 .limit(limit)
                 .collect(Collectors.toList());
+    }
+
+    public void forEach(List<Person> people, Consumer<Person> consumer) {
+        people.forEach(consumer);
+    }
+
+    public void peek(List<Person> people, Consumer<Person> consumer) {
+        people.stream()
+                .peek(consumer)
+                .toList();
     }
 }

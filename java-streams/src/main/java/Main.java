@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class Main {
@@ -80,5 +81,15 @@ public class Main {
         sh.supplierGenerate(personSupplier, 3)
                 .forEach(System.out::println);
 
+        System.out.println("=== Consumer - forEach ===");
+        Consumer<Person> print = p -> System.out.println(p.getName() + " | " + p.getAge());
+        sh.forEach(people, print);
+
+        System.out.println("\n=== Consumer - andThen ===");
+        Consumer<Person> printEmail = p -> System.out.println("email: " + p.getEmail());
+        sh.forEach(people, print.andThen(printEmail));
+
+        System.out.println("\n=== Consumer - peek ===");
+        sh.peek(people, p -> System.out.println("peeking: " + p.getName()));
     }
 }
