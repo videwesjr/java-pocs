@@ -76,20 +76,15 @@ public class Main {
                 .forEach(p -> System.out.println(p.getName()));
 
         System.out.println("\n=== Supplier ===");
-        System.out.println("generate:");
+        System.out.println("\ngenerate:");
         Supplier<Person> personSupplier = () -> new Person("Carlos", 30, "carlos@gmail.com");
         sh.supplierGenerate(personSupplier, 3)
                 .forEach(System.out::println);
 
-        System.out.println("=== Consumer - forEach ===");
-        Consumer<Person> print = p -> System.out.println(p.getName() + " | " + p.getAge());
-        sh.forEach(people, print);
-
-        System.out.println("\n=== Consumer - andThen ===");
-        Consumer<Person> printEmail = p -> System.out.println("email: " + p.getEmail());
-        sh.forEach(people, print.andThen(printEmail));
+        System.out.println("\n=== Consumer - forEach ===");
+        sh.printPersonNameAndAge(people);
 
         System.out.println("\n=== Consumer - peek ===");
-        sh.peek(people, p -> System.out.println("peeking: " + p.getName()));
+        sh.peekPersonsWithFilter(people);
     }
 }

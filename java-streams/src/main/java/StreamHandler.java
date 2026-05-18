@@ -105,13 +105,16 @@ public class StreamHandler {
                 .collect(Collectors.toList());
     }
 
-    public void forEach(List<Person> people, Consumer<Person> consumer) {
-        people.forEach(consumer);
+    public void printPersonNameAndAge(List<Person> people) {
+        people.stream()
+                .forEach(p -> System.out.println(p.getName() + " | " + p.getAge()));
     }
 
-    public void peek(List<Person> people, Consumer<Person> consumer) {
-        people.stream()
-                .peek(consumer)
-                .toList();
+    public List<Person> peekPersonsWithFilter(List<Person> people) {
+        return people.stream()
+                .peek(p -> System.out.println("before filter: " + p.getName() + " | " + p.getAge()))
+                .filter(p -> p.getAge() >= 18)
+                .peek(p -> System.out.println("after filter : " + p.getName() + " | " + p.getAge()))
+                .collect(Collectors.toList());
     }
 }
