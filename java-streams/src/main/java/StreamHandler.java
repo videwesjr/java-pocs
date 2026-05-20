@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -106,15 +105,20 @@ public class StreamHandler {
     }
 
     public void printPersonNameAndAge(List<Person> people) {
-        people.stream()
-                .forEach(p -> System.out.println(p.getName() + " | " + p.getAge()));
+        people.forEach(p -> System.out.println(p.getName() + " | " + p.getAge()));
     }
 
-    public List<Person> peekPersonsWithFilter(List<Person> people) {
-        return people.stream()
+    public void peekPersonsWithFilter(List<Person> people) {
+        people.stream()
                 .peek(p -> System.out.println("before filter: " + p.getName() + " | " + p.getAge()))
                 .filter(p -> p.getAge() >= 18)
-                .peek(p -> System.out.println("after filter : " + p.getName() + " | " + p.getAge()))
-                .collect(Collectors.toList());
+                .peek(p -> System.out.println("after filter : " + p.getName() + " | " + p.getAge()));
+    }
+
+    // BinaryOperator - takes two inputs of the same type and returns one of the same type
+    public Person oldest(List<Person> people) {
+        return people.stream()
+                .reduce((a, b) -> a.getAge() >= b.getAge() ? a : b)
+                .orElseThrow();
     }
 }

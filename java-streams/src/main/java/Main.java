@@ -86,5 +86,10 @@ public class Main {
 
         System.out.println("\n=== Consumer - peek ===");
         sh.peekPersonsWithFilter(people);
+
+        System.out.println("\n=== BinaryOperator ===");
+        Person oldest = sh.oldest(people);
+        System.out.println("Oldest  : " + oldest.getName() + " - age: " + oldest.getAge());
+
     }
 }
