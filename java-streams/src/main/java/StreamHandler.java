@@ -1,6 +1,7 @@
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -120,5 +121,13 @@ public class StreamHandler {
         return people.stream()
                 .reduce((a, b) -> a.getAge() >= b.getAge() ? a : b)
                 .orElseThrow();
+    }
+
+    // UnaryOperator - transform each element into the same type
+    public List<Person> anonymize(List<Person> people) {
+        UnaryOperator<Person> anonymize = p -> new Person(p.getName(), p.getAge(), "***@***.com");
+        return people.stream()
+                .map(anonymize)
+                .collect(Collectors.toList());
     }
 }

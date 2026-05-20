@@ -88,8 +88,9 @@ public class Main {
         sh.peekPersonsWithFilter(people);
 
         System.out.println("\n=== BinaryOperator ===");
-        Person oldest = sh.oldest(people);
-        System.out.println("Oldest  : " + oldest.getName() + " - age: " + oldest.getAge());
+        System.out.println("Oldest  : " + sh.oldest(people));
 
+        System.out.println("\n=== UnaryOperator ===");
+        sh.anonymize(people).forEach(System.out::println);
     }
 }
