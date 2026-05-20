@@ -105,10 +105,12 @@ public class StreamHandler {
                 .collect(Collectors.toList());
     }
 
+    // Consumer - receives an input and performs a side effect, returns nothing
     public void printPersonNameAndAge(List<Person> people) {
         people.forEach(p -> System.out.println(p.getName() + " | " + p.getAge()));
     }
 
+    // Consumer - peek inspects each element mid-pipeline without changing it, useful for debugging
     public void peekPersonsWithFilter(List<Person> people) {
         people.stream()
                 .peek(p -> System.out.println("before filter: " + p.getName() + " | " + p.getAge()))
@@ -128,6 +130,6 @@ public class StreamHandler {
         UnaryOperator<Person> anonymize = p -> new Person(p.getName(), p.getAge(), "***@***.com");
         return people.stream()
                 .map(anonymize)
-                .collect(Collectors.toList());
+                .toList();
     }
 }
