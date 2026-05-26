@@ -1,5 +1,25 @@
+import java.util.List;
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+    public static void main(String[] args) throws Exception {
+
+        ConcurrencyHandler handler = new ConcurrencyHandler();
+
+        List<Task> tasks = List.of(
+                new Task("Database Backup", 1),
+                new Task("Send Emails", 2),
+                new Task("Generate Report", 3),
+                new Task("Clear Cache", 4)
+        );
+
+        System.out.println("=== Fixed Thread Pool (2 threads) ===");
+        handler.runWithFixedPool(tasks, 2);
+
+        System.out.println("\n=== Single Thread ===");
+        handler.runWithSingleThread(tasks);
+
+        System.out.println("\n=== Cached Thread Pool ===");
+        handler.runWithCachedPool(tasks);
     }
 }
