@@ -62,4 +62,23 @@ public class ConcurrencyHandler {
         executor.shutdown();
         executor.awaitTermination(10, TimeUnit.SECONDS);
     }
+
+    // Runnable - executes a task in a thread without returning a result
+    public void runWithRunnable(Task task) throws InterruptedException {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+
+        Runnable runnable = () -> {
+            System.out.println("[" + Thread.currentThread().getName() + "] RUNNING: " + task.name());
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            System.out.println("[" + Thread.currentThread().getName() + "] DONE   : " + task.name());
+        };
+
+        executor.submit(runnable);
+        executor.shutdown();
+        executor.awaitTermination(5, TimeUnit.SECONDS);
+    }
 }

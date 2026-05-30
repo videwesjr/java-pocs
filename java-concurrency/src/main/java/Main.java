@@ -21,5 +21,8 @@ public class Main {
 
         System.out.println("\n=== Cached Thread Pool ===");
         handler.runWithCachedPool(tasks);
+
+        System.out.println("\n=== Runnable ===");
+        handler.runWithRunnable(new Task("Send Notification", 1));
     }
 }
