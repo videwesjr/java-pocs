@@ -24,5 +24,9 @@ public class Main {
 
         System.out.println("\n=== Runnable ===");
         handler.runWithRunnable(new Task("Send Notification", 1));
+
+        System.out.println("\n=== Callable ===");
+        String result = handler.runWithCallable(new Task("Process Payment", 1));
+        System.out.println(result);
     }
 }

@@ -81,4 +81,20 @@ public class ConcurrencyHandler {
         executor.shutdown();
         executor.awaitTermination(5, TimeUnit.SECONDS);
     }
+
+    // Callable - like Runnable but returns a result and can throw checked exceptions
+    public String runWithCallable(Task task) throws ExecutionException, InterruptedException {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+
+        Callable<String> callable = () -> {
+            System.out.println("[" + Thread.currentThread().getName() + "] RUNNING: " + task.name());
+            Thread.sleep(500);
+            return "Result of " + task.name();
+        };
+
+        Future<String> future = executor.submit(callable);
+        String result = future.get();
+        executor.shutdown();
+        return result;
+    }
 }
