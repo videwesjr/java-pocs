@@ -97,4 +97,29 @@ public class ConcurrencyHandler {
         executor.shutdown();
         return result;
     }
+
+    // Future - submits a task and retrieves its result when ready, with timeout support
+    public void runWithFuture(List<Task> tasks) throws InterruptedException {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+
+        List<Future<String>> futures = tasks.stream()
+                .map(task -> executor.submit(() -> {
+                    System.out.println("[" + Thread.currentThread().getName() + "] RUNNING: " + task.name());
+                    Thread.sleep(300);
+                    System.out.println("[" + Thread.currentThread().getName() + "] DONE   : " + task.name());
+                    return "Result of " + task.name();
+                }))
+                .toList();
+
+        for (Future<String> future : futures) {
+            try {
+                System.out.println(future.get(5, TimeUnit.SECONDS));
+            } catch (ExecutionException | TimeoutException e) {
+                System.out.println("task failed: " + e.getMessage());
+            }
+        }
+
+        executor.shutdown();
+        executor.awaitTermination(10, TimeUnit.SECONDS);
+    }
 }

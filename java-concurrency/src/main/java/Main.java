@@ -28,5 +28,8 @@ public class Main {
         System.out.println("\n=== Callable ===");
         String result = handler.runWithCallable(new Task("Process Payment", 1));
         System.out.println(result);
+
+        System.out.println("\n=== Future ===");
+        handler.runWithFuture(tasks);
     }
 }
