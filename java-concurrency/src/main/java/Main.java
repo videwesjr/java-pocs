@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         ConcurrencyHandler handler = new ConcurrencyHandler();
+        LocksHandler locksHandler = new LocksHandler();
 
         List<Task> tasks = List.of(
                 new Task("Database Backup", 1),
@@ -31,5 +32,8 @@ public class Main {
 
         System.out.println("\n=== Future ===");
         handler.runWithFuture(tasks);
+
+        System.out.println("=== ReentrantLock ===");
+        locksHandler.runWithReentrantLock(tasks);
     }
 }
