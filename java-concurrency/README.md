@@ -5,6 +5,9 @@ Java 26 POC showing how to use `ExecutorService` and related concurrency tools a
 - `newFixedThreadPool` — runs a set number of threads concurrently
 - `newSingleThreadExecutor` — runs tasks sequentially in a single thread
 - `newCachedThreadPool` — creates new threads as needed, reuses idle ones
+- `runWithRunnable` — executes a task in a thread without returning a result
+- `runWithCallable` — like Runnable but returns a result and can throw checked exceptions
+- `runWithFuture` — submits a task and retrieves its result when ready, with timeout support
 
 ---
 
@@ -51,6 +54,28 @@ Java 26 POC showing how to use `ExecutorService` and related concurrency tools a
 [pool-3-thread-1] DONE   : Database Backup
 [pool-3-thread-3] DONE   : Generate Report
 [pool-3-thread-4] DONE   : Clear Cache
+
+=== Runnable ===
+[pool-4-thread-1] RUNNING: Send Notification
+[pool-4-thread-1] DONE   : Send Notification
+
+=== Callable ===
+[pool-5-thread-1] RUNNING: Process Payment
+Result of Process Payment
+
+=== Future ===
+[pool-6-thread-2] RUNNING: Send Emails
+[pool-6-thread-1] RUNNING: Database Backup
+[pool-6-thread-2] DONE   : Send Emails
+[pool-6-thread-1] DONE   : Database Backup
+[pool-6-thread-2] RUNNING: Generate Report
+Result of Database Backup
+Result of Send Emails
+[pool-6-thread-1] RUNNING: Clear Cache
+[pool-6-thread-2] DONE   : Generate Report
+[pool-6-thread-1] DONE   : Clear Cache
+Result of Generate Report
+Result of Clear Cache
 
 BUILD SUCCESSFUL in 5s
 ```
