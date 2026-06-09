@@ -35,5 +35,11 @@ public class Main {
 
         System.out.println("=== ReentrantLock ===");
         locksHandler.runWithReentrantLock(tasks);
+
+        System.out.println("\n=== ReadWriteLock ===");
+        locksHandler.runWithReadWriteLock(tasks);
+
+        System.out.println("\n=== StampedLock ===");
+        locksHandler.runWithStampedLock(tasks);
     }
 }
