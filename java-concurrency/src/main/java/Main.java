@@ -41,5 +41,17 @@ public class Main {
 
         System.out.println("\n=== StampedLock ===");
         locksHandler.runWithStampedLock(tasks);
+
+        System.out.println("\n=== AtomicInteger ===");
+        locksHandler.runWithAtomicInteger(tasks);
+
+        System.out.println("\n=== AtomicBoolean ===");
+        locksHandler.runWithAtomicBoolean(tasks);
+
+        System.out.println("\n=== AtomicReference ===");
+        locksHandler.runWithAtomicReference(tasks);
+
+        System.out.println("\n=== LongAdder ===");
+        locksHandler.runWithLongAdder(tasks);
     }
 }
