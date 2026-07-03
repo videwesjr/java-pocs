@@ -1,7 +1,9 @@
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -54,5 +56,37 @@ public class JavaTimeHandler {
 
     public String formatDate(LocalDate date, String pattern) {
         return date.format(DateTimeFormatter.ofPattern(pattern));
+    }
+
+    public LocalDate plusPeriod(LocalDate date, int years, int months, int days) {
+        return date.plus(Period.of(years, months, days));
+    }
+
+    public LocalDate minusPeriod(LocalDate date, int years, int months, int days) {
+        return date.minus(Period.of(years, months, days));
+    }
+
+    public LocalDateTime plusDuration(LocalDateTime dateTime, long hours, long minutes) {
+        return dateTime.plus(Duration.ofHours(hours).plusMinutes(minutes));
+    }
+
+    public LocalDateTime minusDuration(LocalDateTime dateTime, long hours, long minutes) {
+        return dateTime.minus(Duration.ofHours(hours).plusMinutes(minutes));
+    }
+
+    public boolean isBefore(LocalDate a, LocalDate b) {
+        return a.isBefore(b);
+    }
+
+    public boolean isAfter(LocalDate a, LocalDate b) {
+        return a.isAfter(b);
+    }
+
+    public int compare(LocalDate a, LocalDate b) {
+        return a.compareTo(b);
+    }
+
+    public boolean isWithinRange(LocalDate date, LocalDate start, LocalDate end) {
+        return !date.isBefore(start) && !date.isAfter(end);
     }
 }

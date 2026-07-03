@@ -62,3 +62,25 @@ Joda      format(...)       : 01/07/2026
 
 BUILD SUCCESSFUL in 3s
 ```
+
+### Result Arithmetic & comparison
+
+```
+=== Adding/subtracting: Period & Duration ===
+java.time plus Period(1y2m10d) : 2027-09-11
+java.time minus Period(1y2m10d): 2025-04-21
+Joda      plus Period(1y2m10d) : 2027-09-11
+Joda      minus Period(1y2m10d): 2025-04-21
+java.time plus Duration(3h30m) : 2026-07-01T18:00
+Joda      plus Duration(3h30m) : 2026-07-01T18:00:00.000-03:00
+
+=== Comparing dates ===
+java.time isBefore/isAfter/compareTo : true / false / -5
+Joda      isBefore/isAfter/compareTo : true / false / -1
+
+=== Date ranges ===
+java.time manual range check : true
+Joda      Interval.contains  : true
+
+BUILD SUCCESSFUL in 10s
+```
