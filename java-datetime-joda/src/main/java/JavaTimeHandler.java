@@ -7,6 +7,12 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
 
 public class JavaTimeHandler {
 
@@ -88,5 +94,29 @@ public class JavaTimeHandler {
 
     public boolean isWithinRange(LocalDate date, LocalDate start, LocalDate end) {
         return !date.isBefore(start) && !date.isAfter(end);
+    }
+
+    public Date toLegacyDate(ZonedDateTime zonedDateTime) {
+        return Date.from(zonedDateTime.toInstant());
+    }
+
+    public ZonedDateTime fromLegacyDate(Date date, ZoneId zone) {
+        return ZonedDateTime.ofInstant(date.toInstant(), zone);
+    }
+
+    public Calendar toCalendar(ZonedDateTime zonedDateTime) {
+        return GregorianCalendar.from(zonedDateTime);
+    }
+
+    public ZonedDateTime fromCalendar(Calendar calendar) {
+        return ZonedDateTime.ofInstant(calendar.toInstant(), calendar.getTimeZone().toZoneId());
+    }
+
+    public DateTime toJoda(ZonedDateTime zonedDateTime) {
+        return new DateTime(zonedDateTime.toInstant().toEpochMilli(), DateTimeZone.forID(zonedDateTime.getZone().getId()));
+    }
+
+    public long toEpochMilli(ZonedDateTime zonedDateTime) {
+        return zonedDateTime.toInstant().toEpochMilli();
     }
 }

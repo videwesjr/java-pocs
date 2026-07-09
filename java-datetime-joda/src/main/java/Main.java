@@ -1,4 +1,10 @@
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.joda.time.DateTime;
 
 public class Main {
 
@@ -13,6 +19,7 @@ public class Main {
         runArithmetic();
         runComparison();
         runDateRanges();
+        runConversions();
     }
 
     private static void runCreation() {
@@ -85,5 +92,32 @@ public class Main {
         org.joda.time.DateTime intervalEnd = joda.ofDateTime(2026, 12, 31, 23, 59);
         System.out.println("Joda      Interval.contains  : "
                 + joda.isWithinInterval(joda.ofDateTime(2026, 7, 1, 14, 30), intervalStart, intervalEnd));
+    }
+
+    private static void runConversions() {
+        System.out.println("\n=== Legacy Date/Calendar <-> java.time <-> Joda ===");
+        ZonedDateTime zdt = jt.ofZoned(2026, 7, 1, 14, 30, "America/Sao_Paulo");
+
+        Date legacyDate = jt.toLegacyDate(zdt);
+        System.out.println("java.time -> Date     : " + legacyDate);
+        System.out.println("Date -> java.time     : " + jt.fromLegacyDate(legacyDate, ZoneId.of("America/Sao_Paulo")));
+
+        Calendar calendar = jt.toCalendar(zdt);
+        System.out.println("java.time -> Calendar : " + calendar.getTime());
+        System.out.println("Calendar -> java.time : " + jt.fromCalendar(calendar));
+
+        DateTime jodaFromLegacy = joda.fromLegacyDate(legacyDate);
+        System.out.println("Date -> Joda          : " + jodaFromLegacy);
+        System.out.println("Joda -> Date          : " + joda.toLegacyDate(jodaFromLegacy));
+
+        System.out.println("\n=== Joda DateTime <-> java.time ZonedDateTime ===");
+        DateTime jodaFromJava = jt.toJoda(zdt);
+        System.out.println("java.time -> Joda     : " + jodaFromJava);
+        System.out.println("Joda -> java.time     : " + joda.toJavaZonedDateTime(jodaFromJava));
+
+        System.out.println("\n=== Epoch millis across Date, java.time, Joda ===");
+        System.out.println("Date.getTime()          : " + legacyDate.getTime());
+        System.out.println("java.time toEpochMilli(): " + jt.toEpochMilli(zdt));
+        System.out.println("Joda getMillis()        : " + jodaFromJava.getMillis());
     }
 }

@@ -84,3 +84,26 @@ Joda      Interval.contains  : true
 
 BUILD SUCCESSFUL in 10s
 ```
+
+### Result Conversions
+
+```
+=== Legacy Date/Calendar <-> java.time <-> Joda ===
+java.time -> Date     : Wed Jul 01 14:30:00 GMT-03:00 2026
+Date -> java.time     : 2026-07-01T14:30-03:00[America/Sao_Paulo]
+java.time -> Calendar : Wed Jul 01 14:30:00 GMT-03:00 2026
+Calendar -> java.time : 2026-07-01T14:30-03:00[America/Sao_Paulo]
+Date -> Joda          : 2026-07-01T14:30:00.000-03:00
+Joda -> Date          : Wed Jul 01 14:30:00 GMT-03:00 2026
+
+=== Joda DateTime <-> java.time ZonedDateTime ===
+java.time -> Joda     : 2026-07-01T14:30:00.000-03:00
+Joda -> java.time     : 2026-07-01T14:30-03:00[America/Sao_Paulo]
+
+=== Epoch millis across Date, java.time, Joda ===
+Date.getTime()          : 1782927000000
+java.time toEpochMilli(): 1782927000000
+Joda getMillis()        : 1782927000000
+
+BUILD SUCCESSFUL in 2s
+```

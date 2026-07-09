@@ -9,6 +9,10 @@ import org.joda.time.Period;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Date;
+
 public class JodaTimeHandler {
 
     public LocalDate nowDate() {
@@ -90,5 +94,22 @@ public class JodaTimeHandler {
 
     public boolean isWithinInterval(DateTime dateTime, DateTime start, DateTime end) {
         return new Interval(start, end).contains(dateTime);
+    }
+
+    public Date toLegacyDate(DateTime dateTime) {
+        return dateTime.toDate();
+    }
+
+    public DateTime fromLegacyDate(Date date) {
+        return new DateTime(date);
+    }
+
+    public ZonedDateTime toJavaZonedDateTime(DateTime dateTime) {
+        return ZonedDateTime.ofInstant(java.time.Instant.ofEpochMilli(dateTime.getMillis()),
+                ZoneId.of(dateTime.getZone().getID()));
+    }
+
+    public long toEpochMilli(DateTime dateTime) {
+        return dateTime.getMillis();
     }
 }
