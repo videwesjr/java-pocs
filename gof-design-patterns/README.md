@@ -7,7 +7,7 @@ Java POC implementing the 23 Gang of Four design patterns, one small self-contai
 #### Creational
 - [x] Singleton
 - [x] Factory Method
-- [ ] Abstract Factory
+- [x] Abstract Factory
 - [ ] Builder
 - [ ] Prototype
 
