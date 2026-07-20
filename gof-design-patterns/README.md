@@ -1,4 +1,5 @@
 ## gof-design-patterns
+GOF Explain: https://refactoring.guru/design-patterns/catalog
 
 Java POC implementing the 23 Gang of Four design patterns, one small self-contained example per pattern.
 
@@ -8,7 +9,7 @@ Java POC implementing the 23 Gang of Four design patterns, one small self-contai
 - [x] Singleton
 - [x] Factory Method
 - [x] Abstract Factory
-- [ ] Builder
+- [x] Builder
 - [ ] Prototype
 
 #### Structural
