@@ -10,7 +10,7 @@ Java POC implementing the 23 Gang of Four design patterns, one small self-contai
 - [x] Factory Method
 - [x] Abstract Factory
 - [x] Builder
-- [ ] Prototype
+- [x] Prototype
 
 #### Structural
 - [ ] Adapter
