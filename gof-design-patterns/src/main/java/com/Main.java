@@ -5,6 +5,7 @@ import com.creational.builder.BuilderDemo;
 import com.creational.factorymethod.FactoryMethodDemo;
 import com.creational.prototype.PrototypeDemo;
 import com.creational.singleton.SingletonDemo;
+import com.structural.adapter.AdapterDemo;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,5 +18,7 @@ public class Main {
         BuilderDemo.run();
         System.out.println();
         PrototypeDemo.run();
+        System.out.println();
+        AdapterDemo.run();
     }
 }
