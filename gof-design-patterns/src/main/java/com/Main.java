@@ -6,6 +6,7 @@ import com.creational.factorymethod.FactoryMethodDemo;
 import com.creational.prototype.PrototypeDemo;
 import com.creational.singleton.SingletonDemo;
 import com.structural.adapter.AdapterDemo;
+import com.structural.bridge.BridgeDemo;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,5 +21,7 @@ public class Main {
         PrototypeDemo.run();
         System.out.println();
         AdapterDemo.run();
+        System.out.println();
+        BridgeDemo.run();
     }
 }
