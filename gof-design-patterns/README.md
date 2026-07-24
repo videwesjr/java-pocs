@@ -15,7 +15,7 @@ Java POC implementing the 23 Gang of Four design patterns, one small self-contai
 #### Structural
 - [x] Adapter
 - [x] Bridge
-- [ ] Composite
+- [x] Composite
 - [ ] Decorator
 - [ ] Facade
 - [ ] Flyweight
