@@ -8,6 +8,7 @@ import com.creational.singleton.SingletonDemo;
 import com.structural.adapter.AdapterDemo;
 import com.structural.bridge.BridgeDemo;
 import com.structural.composite.CompositeDemo;
+import com.structural.decorator.DecoratorDemo;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,5 +27,7 @@ public class Main {
         BridgeDemo.run();
         System.out.println();
         CompositeDemo.run();
+        System.out.println();
+        DecoratorDemo.run();
     }
 }
