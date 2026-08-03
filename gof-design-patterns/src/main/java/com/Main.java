@@ -10,6 +10,7 @@ import com.structural.bridge.BridgeDemo;
 import com.structural.composite.CompositeDemo;
 import com.structural.decorator.DecoratorDemo;
 import com.structural.facade.FacadeDemo;
+import com.structural.flyweight.FlyweightDemo;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,5 +33,7 @@ public class Main {
         DecoratorDemo.run();
         System.out.println();
         FacadeDemo.run();
+        System.out.println();
+        FlyweightDemo.run();
     }
 }
