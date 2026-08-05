@@ -11,6 +11,7 @@ import com.structural.composite.CompositeDemo;
 import com.structural.decorator.DecoratorDemo;
 import com.structural.facade.FacadeDemo;
 import com.structural.flyweight.FlyweightDemo;
+import com.structural.proxy.ProxyDemo;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,5 +36,7 @@ public class Main {
         FacadeDemo.run();
         System.out.println();
         FlyweightDemo.run();
+        System.out.println();
+        ProxyDemo.run();
     }
 }
