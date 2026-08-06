@@ -1,5 +1,6 @@
 package com;
 
+import com.behavioral.chainofresponsibility.ChainOfResponsibilityDemo;
 import com.creational.abstractfactory.AbstractFactoryDemo;
 import com.creational.builder.BuilderDemo;
 import com.creational.factorymethod.FactoryMethodDemo;
@@ -38,5 +39,7 @@ public class Main {
         FlyweightDemo.run();
         System.out.println();
         ProxyDemo.run();
+        System.out.println();
+        ChainOfResponsibilityDemo.run();
     }
 }

@@ -22,7 +22,7 @@ Java POC implementing the 23 Gang of Four design patterns, one small self-contai
 - [x] Proxy
 
 #### Behavioral
-- [ ] Chain of Responsibility
+- [x] Chain of Responsibility
 - [ ] Command
 - [ ] Interpreter
 - [ ] Iterator
