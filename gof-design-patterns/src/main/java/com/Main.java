@@ -2,6 +2,7 @@ package com;
 
 import com.behavioral.chainofresponsibility.ChainOfResponsibilityDemo;
 import com.behavioral.command.CommandDemo;
+import com.behavioral.interpreter.InterpreterDemo;
 import com.creational.abstractfactory.AbstractFactoryDemo;
 import com.creational.builder.BuilderDemo;
 import com.creational.factorymethod.FactoryMethodDemo;
@@ -44,5 +45,7 @@ public class Main {
         ChainOfResponsibilityDemo.run();
         System.out.println();
         CommandDemo.run();
+        System.out.println();
+        InterpreterDemo.run();
     }
 }
