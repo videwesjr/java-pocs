@@ -25,7 +25,7 @@ Java POC implementing the 23 Gang of Four design patterns, one small self-contai
 - [x] Chain of Responsibility
 - [x] Command
 - [x] Interpreter
-- [ ] Iterator
+- [x] Iterator
 - [ ] Mediator
 - [ ] Memento
 - [ ] Observer
