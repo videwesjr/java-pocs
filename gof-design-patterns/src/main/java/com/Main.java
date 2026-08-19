@@ -4,6 +4,7 @@ import com.behavioral.chainofresponsibility.ChainOfResponsibilityDemo;
 import com.behavioral.command.CommandDemo;
 import com.behavioral.interpreter.InterpreterDemo;
 import com.behavioral.iterator.IteratorDemo;
+import com.behavioral.mediator.MediatorDemo;
 import com.creational.abstractfactory.AbstractFactoryDemo;
 import com.creational.builder.BuilderDemo;
 import com.creational.factorymethod.FactoryMethodDemo;
@@ -50,5 +51,7 @@ public class Main {
         InterpreterDemo.run();
         System.out.println();
         IteratorDemo.run();
+        System.out.println();
+        MediatorDemo.run();
     }
 }
