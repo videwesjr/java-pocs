@@ -28,7 +28,7 @@ Java POC implementing the 23 Gang of Four design patterns, one small self-contai
 - [x] Iterator
 - [x] Mediator
 - [x] Memento
-- [ ] Observer
+- [x] Observer
 - [ ] State
 - [ ] Strategy
 - [ ] Template Method

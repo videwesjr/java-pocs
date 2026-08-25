@@ -6,6 +6,7 @@ import com.behavioral.interpreter.InterpreterDemo;
 import com.behavioral.iterator.IteratorDemo;
 import com.behavioral.mediator.MediatorDemo;
 import com.behavioral.memento.MementoDemo;
+import com.behavioral.observer.ObserverDemo;
 import com.creational.abstractfactory.AbstractFactoryDemo;
 import com.creational.builder.BuilderDemo;
 import com.creational.factorymethod.FactoryMethodDemo;
@@ -56,5 +57,7 @@ public class Main {
         MediatorDemo.run();
         System.out.println();
         MementoDemo.run();
+        System.out.println();
+        ObserverDemo.run();
     }
 }
