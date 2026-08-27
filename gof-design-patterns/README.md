@@ -30,7 +30,7 @@ Java POC implementing the 23 Gang of Four design patterns, one small self-contai
 - [x] Memento
 - [x] Observer
 - [x] State
-- [ ] Strategy
+- [x] Strategy
 - [ ] Template Method
 - [ ] Visitor
 

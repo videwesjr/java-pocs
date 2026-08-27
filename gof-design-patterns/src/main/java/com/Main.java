@@ -8,6 +8,7 @@ import com.behavioral.mediator.MediatorDemo;
 import com.behavioral.memento.MementoDemo;
 import com.behavioral.observer.ObserverDemo;
 import com.behavioral.state.StateDemo;
+import com.behavioral.strategy.StrategyDemo;
 import com.creational.abstractfactory.AbstractFactoryDemo;
 import com.creational.builder.BuilderDemo;
 import com.creational.factorymethod.FactoryMethodDemo;
@@ -62,5 +63,7 @@ public class Main {
         ObserverDemo.run();
         System.out.println();
         StateDemo.run();
+        System.out.println();
+        StrategyDemo.run();
     }
 }
