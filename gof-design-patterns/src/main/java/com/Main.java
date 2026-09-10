@@ -16,6 +16,7 @@ import com.creational.builder.BuilderDemo;
 import com.creational.factorymethod.FactoryMethodDemo;
 import com.creational.prototype.PrototypeDemo;
 import com.creational.singleton.SingletonDemo;
+import com.extra.nullobject.NullObjectDemo;
 import com.structural.adapter.AdapterDemo;
 import com.structural.bridge.BridgeDemo;
 import com.structural.composite.CompositeDemo;
@@ -71,5 +72,7 @@ public class Main {
         TemplateMethodDemo.run();
         System.out.println();
         VisitorDemo.run();
+        System.out.println();
+        NullObjectDemo.run();
     }
 }
