@@ -37,7 +37,7 @@ Java POC implementing the 23 Gang of Four design patterns, one small self-contai
 #### Extra (non-GoF)
 - [x] Null Object
 - [x] Specification
-- [ ] Repository
+- [x] Repository
 - [ ] Dependency Injection
 - [ ] Object Pool
 
