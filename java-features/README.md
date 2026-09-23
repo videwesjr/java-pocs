@@ -11,7 +11,7 @@ Each POC should live in its own package under `src/main/java/com`, named after t
 - [x] `var` in lambda parameters — [JEP 323](https://openjdk.org/jeps/323)
 - [x] New `HttpClient` API (standard) — [JEP 321](https://openjdk.org/jeps/321)
 - [x] Launch single-file source-code programs (`java Main.java`) — [JEP 330](https://openjdk.org/jeps/330)
-- [ ] `String` convenience methods (`isBlank`, `strip`, `lines`, `repeat`)
+- [x] `String` convenience methods (`isBlank`, `strip`, `lines`, `repeat`)
 - [ ] Epsilon: a no-op garbage collector — [JEP 318](https://openjdk.org/jeps/318)
 - [ ] Flight Recorder — [JEP 328](https://openjdk.org/jeps/328)
 
