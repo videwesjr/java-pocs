@@ -19,7 +19,7 @@ Each POC should live in its own package under `src/main/java/com`, named after t
 
 - [x] Switch expressions (preview) — [JEP 325](https://openjdk.org/jeps/325)
 - [x] Compact number formatting (`NumberFormat`) — [JEP 326-related API](https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/text/CompactNumberFormat.html)
-- [ ] Shenandoah: a low-pause-time GC (experimental) — [JEP 189](https://openjdk.org/jeps/189)
+- [x] Shenandoah: a low-pause-time GC (experimental) — [JEP 189](https://openjdk.org/jeps/189)
 - [ ] Default CDS archives — [JEP 341](https://openjdk.org/jeps/341)
 
 ### Java 13 — [JDK 13 release notes](https://www.oracle.com/java/technologies/javase/13-relnote-issues.html)
