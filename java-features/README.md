@@ -25,7 +25,7 @@ Each POC should live in its own package under `src/main/java/com`, named after t
 ### Java 13 — [JDK 13 release notes](https://www.oracle.com/java/technologies/javase/13-relnote-issues.html)
 
 - [x] Text blocks (preview) — [JEP 355](https://openjdk.org/jeps/355)
-- [ ] Switch expressions, 2nd preview (`yield`) — [JEP 354](https://openjdk.org/jeps/354)
+- [x] Switch expressions, 2nd preview (`yield`) — [JEP 354](https://openjdk.org/jeps/354)
 - [ ] Dynamic CDS archives — [JEP 350](https://openjdk.org/jeps/350)
 
 ### Java 14 — [JDK 14 release notes](https://www.oracle.com/java/technologies/javase/14-relnote-issues.html)
