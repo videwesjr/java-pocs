@@ -30,7 +30,7 @@ Each POC should live in its own package under `src/main/java/com`, named after t
 
 ### Java 14 — [JDK 14 release notes](https://www.oracle.com/java/technologies/javase/14-relnote-issues.html)
 
-- [ ] Switch expressions (standard) — [JEP 361](https://openjdk.org/jeps/361)
+- [x] Switch expressions (standard) — [JEP 361](https://openjdk.org/jeps/361)
 - [ ] Pattern matching for `instanceof` (preview) — [JEP 305](https://openjdk.org/jeps/305)
 - [ ] Records (preview) — [JEP 359](https://openjdk.org/jeps/359)
 - [ ] Helpful NullPointerExceptions — [JEP 358](https://openjdk.org/jeps/358)
