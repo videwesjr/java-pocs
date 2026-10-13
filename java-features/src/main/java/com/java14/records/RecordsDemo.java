@@ -14,6 +14,13 @@ public class RecordsDemo {
 
     record Point(int x, int y) {
 
+        // Compact canonical constructor: validation without repeating the fields.
+        Point {
+            if (x < 0 || y < 0) {
+                throw new IllegalArgumentException("Coordinates must be non-negative: " + x + ", " + y);
+            }
+        }
+
         static Point origin() {
             return new Point(0, 0);
         }
@@ -36,5 +43,11 @@ public class RecordsDemo {
         points.add(a);
         points.add(b);
         System.out.println("set size after adding equal points: " + points.size());
+
+        try {
+            new Point(-1, 2);
+        } catch (IllegalArgumentException e) {
+            System.out.println("validation: " + e.getMessage());
+        }
     }
 }
