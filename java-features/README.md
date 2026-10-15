@@ -34,7 +34,7 @@ Each POC should live in its own package under `src/main/java/com`, named after t
 - [x] Pattern matching for `instanceof` (preview) — [JEP 305](https://openjdk.org/jeps/305)
 - [x] Records (preview) — [JEP 359](https://openjdk.org/jeps/359)
 - [x] Helpful NullPointerExceptions — [JEP 358](https://openjdk.org/jeps/358)
-- [ ] Text blocks, 2nd preview — [JEP 368](https://openjdk.org/jeps/368)
+- [x] Text blocks, 2nd preview — [JEP 368](https://openjdk.org/jeps/368)
 
 ### Java 15 — [JDK 15 release notes](https://www.oracle.com/java/technologies/javase/15-relnote-issues.html)
 
