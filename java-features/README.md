@@ -38,7 +38,7 @@ Each POC should live in its own package under `src/main/java/com`, named after t
 
 ### Java 15 — [JDK 15 release notes](https://www.oracle.com/java/technologies/javase/15-relnote-issues.html)
 
-- [ ] Text blocks (standard) — [JEP 378](https://openjdk.org/jeps/378)
+- [x] Text blocks (standard) — [JEP 378](https://openjdk.org/jeps/378)
 - [ ] Sealed classes (preview) — [JEP 360](https://openjdk.org/jeps/360)
 - [ ] Hidden classes — [JEP 371](https://openjdk.org/jeps/371)
 - [ ] Records, 2nd preview — [JEP 384](https://openjdk.org/jeps/384)
