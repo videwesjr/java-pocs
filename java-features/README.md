@@ -40,7 +40,7 @@ Each POC should live in its own package under `src/main/java/com`, named after t
 
 - [x] Text blocks (standard) — [JEP 378](https://openjdk.org/jeps/378)
 - [x] Sealed classes (preview) — [JEP 360](https://openjdk.org/jeps/360)
-- [ ] Hidden classes — [JEP 371](https://openjdk.org/jeps/371)
+- [x] Hidden classes — [JEP 371](https://openjdk.org/jeps/371)
 - [ ] Records, 2nd preview — [JEP 384](https://openjdk.org/jeps/384)
 
 ### Java 16 — [JDK 16 release notes](https://www.oracle.com/java/technologies/javase/16-relnote-issues.html)
