@@ -47,7 +47,7 @@ Each POC should live in its own package under `src/main/java/com`, named after t
 
 - [x] Records (standard) — [JEP 395](https://openjdk.org/jeps/395)
 - [x] Pattern matching for `instanceof` (standard) — [JEP 394](https://openjdk.org/jeps/394)
-- [ ] Sealed classes, 2nd preview — [JEP 397](https://openjdk.org/jeps/397)
+- [x] Sealed classes, 2nd preview — [JEP 397](https://openjdk.org/jeps/397)
 - [ ] Vector API (incubator) — [JEP 338](https://openjdk.org/jeps/338)
 - [ ] Foreign Linker API (incubator) — [JEP 389](https://openjdk.org/jeps/389)
 
