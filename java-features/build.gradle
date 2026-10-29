@@ -18,3 +18,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+tasks.withType(JavaCompile).configureEach {
+    // com.java16.vector.VectorApiDemo uses the incubating Vector API (JEP 338).
+    options.compilerArgs += ['--add-modules', 'jdk.incubator.vector']
+}
