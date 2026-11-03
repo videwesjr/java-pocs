@@ -53,7 +53,7 @@ Each POC should live in its own package under `src/main/java/com`, named after t
 
 ### Java 17 (LTS) — [JDK 17 release notes](https://www.oracle.com/java/technologies/javase/17-relnote-issues.html)
 
-- [ ] Sealed classes (standard) — [JEP 409](https://openjdk.org/jeps/409)
+- [x] Sealed classes (standard) — [JEP 409](https://openjdk.org/jeps/409)
 - [ ] Pattern matching for `switch` (preview) — [JEP 406](https://openjdk.org/jeps/406)
 - [ ] Enhanced pseudo-random number generators — [JEP 356](https://openjdk.org/jeps/356)
 - [ ] Foreign Function & Memory API (incubator) — [JEP 412](https://openjdk.org/jeps/412)
